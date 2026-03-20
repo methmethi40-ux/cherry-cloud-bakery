@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 33% 96%;
+    --foreground: 45 15% 15%;
+
+    --card: 45 25% 94%;
+    --card-foreground: 45 15% 15%;
+
+    --popover: 45 33% 96%;
+    --popover-foreground: 45 15% 15%;
+
+    --primary: 45 15% 15%;
+    --primary-foreground: 45 33% 96%;
+
+    --secondary: 45 20% 90%;
+    --secondary-foreground: 45 15% 15%;
+
+    --muted: 45 15% 90%;
+    --muted-foreground: 45 10% 45%;
+
+    --accent: 10 40% 50%;
+    --accent-foreground: 45 33% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 15% 85%;
+    --input: 45 15% 85%;
+    --ring: 10 40% 50%;
+
+    --radius: 0.25rem;
+
+    --shadow-soft: 0 4px 20px -2px hsla(45, 15%, 15%, 0.05);
+
+    --sidebar-background: 45 25% 94%;
+    --sidebar-foreground: 45 15% 15%;
+    --sidebar-primary: 45 15% 15%;
+    --sidebar-primary-foreground: 45 33% 96%;
+    --sidebar-accent: 45 20% 90%;
+    --sidebar-accent-foreground: 45 15% 15%;
+    --sidebar-border: 45 15% 85%;
+    --sidebar-ring: 10 40% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-primary text-primary-foreground rounded-full font-sans text-sm tracking-widest uppercase transition-all duration-300 hover:bg-accent active:scale-[0.98];
+  }
+
+  .btn-acquire {
+    @apply w-full py-6 bg-primary text-primary-foreground font-sans uppercase tracking-widest text-base transition-all duration-300 hover:bg-accent active:scale-[0.98];
+  }
+
+  .nav-link {
+    @apply font-sans text-sm tracking-widest uppercase text-foreground/60 hover:text-foreground transition-colors duration-300;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-serif italic tracking-tight;
+  }
+
+  .body-text {
+    @apply font-sans text-base leading-relaxed text-muted-foreground;
+  }
+
+  .breadcrumb-text {
+    @apply text-xs uppercase tracking-widest text-foreground/40 font-sans;
+  }
+
+  .price-text {
+    @apply font-sans tabular-nums text-foreground/60;
+  }
+}
